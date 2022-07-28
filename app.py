@@ -16,7 +16,7 @@ def summer():
    return  '<h1>Hello Summer Day!</h1>'
 
 def autumn():
-   return '<h1>Hello Autumn </h1>'
+   return '<h1>Hello Autumn ::) </h1>'
 app.add_url_rule('/autumn','autumn',autumn)
 
 @app.route("/get_my_ip", methods=["GET"])
