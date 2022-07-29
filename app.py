@@ -19,6 +19,12 @@ def autumn():
    return '<h1>Hello Autumn ::) </h1>'
 app.add_url_rule('/autumn','autumn',autumn)
 
+@app.route("/my_pubkey", methods=["GET"])
+def my_pubkey():
+   pubkey0 = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBk65s7ZJhsTrR55if8XofyvA/E5Ta0enBxaoF5ugTPnf5iDgN3A3QXBSyY+Yah2p0ehAKftRUf3GaTL0BXSi5g= root@huygens"
+   rt_msg = "<h1>" + pubkey0 + "</h1>"
+   return rt_msg, 200
+
 @app.route("/get_my_ip", methods=["GET"])
 def get_my_ip():
    time0 = datetime.now() 
