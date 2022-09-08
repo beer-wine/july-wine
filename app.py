@@ -56,6 +56,13 @@ def where_am_k():
 def dashboard(name):
    return 'welcome %s' % name
 
+@app.route("/where_am_l/<kid>", methods=["GET"])
+def where_am_l(kid):
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+         return jsonify({'hello': kid ,'ip': request.environ['REMOTE_ADDR']}), 200
+    else:
+         return jsonify({'hello': kid , 'ip': request.environ['HTTP_X_FORWARDED_FOR']}), 200
+
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
