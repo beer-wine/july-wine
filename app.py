@@ -21,7 +21,7 @@ app.add_url_rule('/autumn','autumn',autumn)
 
 @app.route("/my_pubkey", methods=["GET"])
 def my_pubkey():
-   pubkey0 = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBk65s7ZJhsTrR55if8XofyvA/E5Ta0enBxaoF5ugTPnf5iDgN3A3QXBSyY+Yah2p0ehAKftRUf3GaTL0BXSi5g= root@huygens"
+   pubkey0 = "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAGzhOP60OaGzmLQubJEyauRnsZODgENPPMC6daCMMe8/OShQT70VptxdiYcODh4aEWfawFWJGmYzlhlmbTG7JLfOAB3NIFrZz0fxdyZcaDXPJMIgCAe3OdJfpGtcsNdUuVhcDqDs02raulxk4Q5Lve4ITEO+IKDYr3nBGz6Whj9JfoRIA== root@dirac-fermion"
    rt_msg = "<h1>" + pubkey0 + "</h1>"
    return rt_msg, 200
 
